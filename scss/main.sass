@@ -1,0 +1,742 @@
+@import consts
+
+@import mix
+
+@import reset
+
+@import fonts
+
+
+body
+  font-family: $ff
+  font-size: 16px
+  font-weight: 400
+  color: $black
+  position: relative
+  -webkit-overflow-scrolling: touch
+
+svg
+  display: block
+  width: 100%
+  height: 100%
+
+.container
+  max-width: 1140px
+  margin: 0 auto
+
+.header
+  @include bgImage(null, url("../img/background-image.png"), cover)
+  background-position: center bottom 70%
+
+.header_top
+  display: flex
+  justify-content: space-between
+  padding-top: 37px
+
+.logo
+  display: block
+  width: 180px
+  height: 49px
+  img
+    @include img
+
+.nav_text
+  display: inline-block
+  vertical-align: middle
+  font-size: 18px
+  line-height: 24px
+  letter-spacing: 0.025em
+  color: $white
+  margin-right: 18px
+
+.nav_button
+  display: inline-block
+  vertical-align: middle
+
+  span
+    display: block
+    position: relative
+    height: 2px
+    width: 48px
+    background-color: $white
+
+    &::before
+      content: ""
+      position: absolute
+      top: -6px
+      left: 0
+      width: 30px
+      height: 2px
+      background-color: $white
+      display: block
+
+    &::after
+      content: ""
+      position: absolute
+      bottom: -6px
+      left: 0
+      width: 22px
+      height: 2px
+      background-color: $white
+      display: block
+
+.menu
+  display: none
+
+.header_main
+  padding-top: 175px
+  padding-bottom: 165px
+  max-width: 780px
+  margin: 0 auto
+  position: relative
+
+  &::before
+    content: "Пантеон"
+    display: block
+    font-size: 24px
+    color: rgba(255, 158, 189, 0.2)
+    text-transform: uppercase
+    word-wrap: break-word
+    position: absolute
+    top: 182px
+    left: -153px
+    width: 1em
+    line-height: 2.083em
+    text-align: center
+
+  &::after
+    content: "Олимп"
+    display: block
+    font-size: 24px
+    color: rgba(255, 158, 189, 0.6)
+    text-transform: uppercase
+    word-wrap: break-word
+    position: absolute
+    top: 182px
+    left: -103px
+    width: 1em
+    line-height: 2.083em
+    text-align: center
+
+  .title
+      margin-bottom: 50px
+
+      .title_h1
+        font-size: 37px
+        line-height: 15px
+        font-weight: 400
+        color: $white
+        letter-spacing: 0.025em
+        display: inline-block
+        text-transform: uppercase
+
+        p
+          display: block
+          margin-bottom: 65px
+
+      .title_thin
+        font-weight: 200
+        color: $white
+        font-size: 37px
+        line-height: normal
+        letter-spacing: 0.025em
+        display: inline-block
+        margin-right: 15px
+
+      .title_bold
+        display: block
+        font-size: 195px
+        line-height: 27px
+        letter-spacing: 0.025em
+        font-weight: 600
+        color: $white
+
+.video
+  position: relative
+  width: 583px
+  height: 292px
+
+.video_block
+  width: 583px
+  height: 292px
+  background-color: rgb(28, 37, 109)
+  box-shadow: 0px 25px 38px 0px rgba(0, 0, 0, 0.48)
+  opacity: 0.702
+
+.video_description
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  right: -176px
+  max-width: 112px
+  height: 63px
+  font-size: 14px
+  color: $light_pink
+  font-weight: 300
+  line-height: normal
+
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: -144px
+    display: block
+    width: 118px
+    height: 1px
+    background-color: $light_pink
+
+.header_scrolldown
+  height: 76px
+  width: 76px
+  border-radius: 50%
+  left: -250px
+  bottom: 66px
+  position: absolute
+  @include bgImage(rgba(255, 36, 87, 0.502),  url("../icons/scrolldown.svg"), 26px)
+
+.features
+  background-color: $pink
+  padding-top: 54px
+  padding-bottom: 54px
+
+.features_list
+  display: flex
+
+.feature_item
+  padding-left: 30px
+  padding-right: 30px
+  position: relative
+
+  &::after
+    content: ""
+    position: absolute
+    display: block
+    top: 50%
+    transform: translateY(-50%)
+    right: 0
+    height: 49px
+    width: 1px
+    background-color: $border_pink
+
+.feature_item:last-child
+  padding-right: 0
+  &::after
+    display: none
+
+.feature_item.remoteness
+  width: 169px
+  padding-left: 15px
+
+.feature_item.num
+  width: 207px
+  padding-left: 42px
+  padding-right: 25px
+
+.feature_item.mass
+  width: 225px
+  padding-left: 42px
+  padding-right: 45px
+
+.feature_item.satellites
+  width: 201px
+  padding-left: 44px
+  padding-right: 35px
+
+.feature_item.height
+  width: 218px
+  padding-left: 40px
+  padding-right: 44px
+
+.feature_item.temp
+  width: 152px
+  padding-left: 40px
+  padding-right: 15px
+
+.feature_num
+  font-size: 48px
+  line-height: 24px
+  font-weight: 500
+  color: $dark_pink
+  margin-bottom: 24px
+  display: block
+
+.feature_descr
+  font-size: 13px
+  line-height: 18px
+  color: $gray
+  font-weight: 300
+  display: block
+
+.title.h2
+  margin-bottom: 50px
+
+.title_h2
+  font-size: 60px
+  line-height: normal
+  color: $dark_pink
+  font-weight: 500
+
+.title_h3
+  font-size: 24px
+  line-height: 24px
+  color: #000000
+  font-weight: 500
+
+.title.h3
+  margin-bottom: 30px
+
+.accomodation_info.first
+  max-width: 473px
+  margin-right: 50px
+
+.accomodation_info.sec
+  max-width: 368px
+
+.accomodation_content
+  padding-left: 15px
+  padding-top: 86px
+
+.accomodation_wrapper
+  display: flex
+
+.accomodation_text
+  font-style: 14px
+  line-height: 24px
+  color: $gray
+  font-weight: 300
+  p
+    margin-bottom: 23px
+
+.accomodation_decor
+  height: 334px
+
+.idea_subtitle
+  display: block
+  font-size: 24px
+  line-height: 24px
+  color: $black
+  font-weight: 500
+  margin-bottom: 35px
+
+.idea_text
+  font-size: 16px
+  line-height: 24px
+  color: $gray
+  font-weight: 300
+  max-width: 670px
+  margin-bottom: 23px
+
+.idea
+  padding-left: 15px
+
+.idea_blockquote
+  font-size: 18px
+  line-height: 24px
+  color: $dark_pink
+  font-weight: 300
+  margin-top: 44px
+  margin-bottom: 47px
+  width: 683px
+  position: relative
+
+  &::before
+    content: "‘"
+    font-size: 60px
+    line-height: 24px
+    font-weight: 300
+    color: $dark_pink
+    position: absolute
+    left: -37px
+    top: -8px
+
+  &::after
+    content: "‘"
+    font-size: 60px
+    line-height: 24px
+    font-weight: 300
+    color: $dark_pink
+    position: absolute
+    left: -30px
+    top: -8px
+
+.idea_photo
+  width: 325px
+  height: 375px
+  position: relative
+  margin-top: 45px
+  img
+    width: auto
+    height: auto
+    max-width: 100%
+    max-height: 100%
+  &::before
+    content: ""
+    border: 10px solid rgb(225, 36, 87)
+    position: absolute
+    width: 305px
+    height: 353px
+    display: block
+    top: -47px
+    left: -52px
+    z-index: -1
+
+.idea_content
+  display: flex
+
+.idea_left
+  margin-right: 77px
+
+.price
+  margin-top: 70px
+
+.price_content
+  @include bgImage(null, url("../img/price-bg.png"), contain)
+  display: flex
+  padding-top: 60px
+  padding-bottom: 54px
+  height: 307px
+  padding-right: 62px
+  padding-left: 27px
+
+.price_title
+  font-size: 24px
+  line-height: 24px
+  color: $white
+  font-weight: 500
+  margin-bottom: 28px
+  display: block
+
+.price_description
+  font-size: 16px
+  line-height: 24px
+  color: $white
+  font-weight: 300
+  max-width: 609px
+  margin-bottom: 28px
+  display: block
+
+.price_promotion
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.price_num
+  font-size: 60px
+  line-height: 24px
+  color: $white
+  font-weight: 200
+  margin-right: 38px
+
+.price_goal
+  font-size: 24px
+  line-height: 24px
+  color: $white
+  font-weight: 200
+  padding-bottom: 6px
+  border-bottom: 1px solid #ffffff
+  padding-right: 65px
+  margin-right: 35px
+
+.price_button
+  font-size: 18px
+  line-height: 24px
+  font-weight: 500
+  color: $btn_pink
+  border-radius: 28px
+  background-color: $white
+  width: 200px
+  height: 57px
+  text-align: center
+  box-shadow: 0 0 30px $white
+
+.price_img
+  margin-right: 60px
+  margin-top: -90px
+  width: 310px
+  height: 310px
+  img
+    @include img
+
+body
+  background-image: url('../img/pattern.png')
+  background-repeat: repeat
+
+.bg_main
+  //background-image: url('../img/pattern.png')
+  //background-repeat: repeat
+  padding-bottom: 165px
+
+.journal
+  @include bgImage(null, url("../img/space.jpg"), cover)
+  padding-top: 110px
+  padding-bottom: 143px
+
+.journal_title
+  font-size: 59px
+  line-height: normal
+  font-weight: 500
+  margin-bottom: 64px
+  color: $white
+  display: block
+
+.journal_video
+  .video_block
+    background-color: #e12457
+    box-shadow: none
+    width: 100%
+    height: 574px
+  margin-bottom: 77px
+
+.journal_tabs
+  display: flex
+
+.journal_left
+  width: 263px
+
+.tabs_title
+  font-size: 16px
+  line-height: 24px
+  color: $violet
+  position: relative
+  max-width: 218px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 50px
+
+  &.active
+    color: $white
+    position: relative
+    .tabs_icon
+      display: inline-block
+      @include bgImage(null, url('../icons/arrow-white.svg'), contain)
+
+      &::before
+        display: inline-block
+        position: absolute
+        content: ""
+        @include bgImage(null, url('../icons/arrow-white.svg'), contain)
+        width: 8px
+        height: 17px
+        flex: 0 0 8px
+        top: 0
+        right: -7px
+        opacity: 0.5
+      &::after
+        display: inline-block
+        position: absolute
+        content: ""
+        @include bgImage(null, url('../icons/arrow-white.svg'), contain)
+        width: 8px
+        height: 17px
+        flex: 0 0 8px
+        top: 0
+        right: -14px
+        opacity: 0.2
+
+
+  .tabs_icon
+    position: relative
+    display: inline-block
+    @include bgImage(null, url('../icons/arrow-violet.svg'), contain)
+    width: 8px
+    flex: 0 0 8px
+    height: 17px
+    margin-left: 30px
+    vertical-align: middle
+
+  .tabs_text
+    display: inline-block
+    vertical-align: middle
+    margin-right: 10px
+
+.journal_right
+  padding-left: 23px
+
+.journal_subtitle
+  display: block
+  font-size: 24px
+  line-height: 24px
+  font-weight: 500
+  color: $white
+  margin-bottom: 40px
+
+.journal_content
+  font-size: 16px
+  line-height: 24px
+  font-weight: 300
+  color: $white
+  max-width: 765px
+  p
+    margin-bottom: 20px
+
+.conditions
+  padding-top: 111px
+  padding-bottom: 147px
+  padding-bottom: 147px
+
+.conditions_title
+  font-size: 60px
+  line-height: normal
+  color: $dark_pink
+  font-weight: 500
+  display: block
+  margin-bottom: 55px
+
+.conditions_left,
+.conditions_tabs
+  display: flex
+
+.conditions_left
+  margin-right: 82px
+
+.conditions_line
+  width: 3px
+  background-color: $dark_pink
+  height: 100%
+  margin-right: 34px
+
+.conditions_tabs
+  .tabs
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  .tabs_title
+    max-width: 33%
+    display: flex
+    flex-direction: column
+    position: relative
+    margin-bottom: 0
+    .tabs_icon
+      display: block
+      margin-left: 0
+    .tabs_wrapper
+      display: none
+      position: relative
+      width: 100%
+      margin-top: 17px
+    &::before
+      content: ""
+      display: block
+      top: 10px
+      height: 10px
+      width: 10px
+      position: absolute
+      border-radius: 50%
+      border: 3px solid $dark_pink
+      background-color: $white
+      left: -44px
+    &:first-child::before
+      top: 0
+
+  .tabs_text
+    font-size: 19px
+    line-height: 24px
+    font-weight: 500
+    color: $dark_pink
+    position: absolute
+    transform: rotate(90deg)
+    margin-right: 0
+    top: 0
+    left: 0
+    white-space: nowrap
+  .tabs_title.active
+    .tabs_wrapper
+      display: block
+    &::before
+      background-color: $dark_pink
+
+  .tabs_title.accomodation
+    .tabs_icon
+      width: 30px
+      flex: 0 0 30px
+      height: 23px
+      @include bgImage(null, url("../img/teacup.png"), contain)
+    .tabs_wrapper
+      height: 114px
+    .tabs_text
+      top: 45px
+      left: -55px
+
+  .tabs_title.security
+    .tabs_icon
+      width: 29px
+      flex: 0 0 29px
+      height: 20px
+      @include bgImage(null, url("../img/helmet.png"), contain)
+    .tabs_wrapper
+      height: 123px
+    .tabs_text
+      top: 49px
+      left: -58px
+  .tabs_title.science
+    .tabs_icon
+      width: 22px
+      flex: 0 0 22px
+      height: 31px
+      @include bgImage(null, url("../img/microscope.png"), contain)
+    .tabs_wrapper
+      height: 144px
+    .tabs_text
+      top: 57px
+      left: -68px
+  .tabs_title.fun
+    .tabs_icon
+      width: 25px
+      flex: 0 0 25px
+      height: 21px
+      @include bgImage(null, url("../img/photo.png"), contain)
+    .text_wrapper
+      height: 118px
+    .tabs_text
+      top: 46px
+      left: -55px
+  .tabs_title.garden
+    .tabs_icon
+      width: 26px
+      flex: 0 0 26px
+      height: 27px
+      @include bgImage(null, url("../img/leaves.png"), contain)
+    .text_wrapper
+      height: 118px
+    .text_text
+      top: 46px
+      left: -53px
+
+.condition_img
+  display: block
+  width: 100%
+  height: 456px
+  margin-bottom: 40px
+  img
+    @include img
+
+.condition_subtitle
+  display: block
+  font-size: 24px
+  line-height: 24px
+  color: $black
+  font-weight:  500
+  margin-bottom: 20px
+
+.condetion_text
+  font-size: 16px
+  line-height: 24px
+  font-weight: 300
+  color: $gray
+
+  p
+    display: block
+    margin-bottom: 20px
+
+.condition_btn
+  width: 161px
+  height: 48px
+  font-size: 16px
+  line-height: 19px
+  font-weight: 500
+  background-color: $white
+  border-radius: 28px
+  color: $dark_pink
+  margin-top: 45px

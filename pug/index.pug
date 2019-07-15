@@ -1,0 +1,160 @@
+extends templates/main
+
+
+block variables
+    - var pageTitle = 'Главная'
+
+block content
+    section.features
+        div.container
+            ul.features_list
+                li.feature_item.remoteness
+                    span.feature_num 4
+                    span.feature_descr четвёртая планета по удалённости от Солнца
+                li.feature_item.num
+                    span.feature_num 7
+                    span.feature_descr седьмая по размерам планета Солнечной системы
+                li.feature_item.mass
+                    span.feature_num 10,7%
+                    span.feature_descr массы Земли (ваш вес будет в 3 раза меньше, чем на Земле)
+                li.feature_item.satellites
+                    span.feature_num 2
+                    span.feature_descr спутника вместо Луны (как картошка, только больше)
+                li.feature_item.height
+                    span.feature_num 21&#160;км
+                    span.feature_descr высота самой высокой горы Марса.
+                li.feature_item.temp
+                    span.feature_num +20
+                    span.feature_descr максимальная температура на поверхности
+    div.bg.bg_main
+        section.accommodation
+            div.container
+                div.accomodation_content
+                    div.title.h2
+                        h2.title_h2 Марс. Вспомнить всё
+                    div.accomodation_wrapper
+                        div.accomodation_info.first
+                            div.title.h3
+                                h3.title_h3 Что такое Марс?
+                            div.accomodation_text
+                                p Планета Солнечной системы, названа в честь Марса — древнеримского бога войны. Иногда Марс называют «красной планетой» из-за красного оттенка поверхности, придаваемого ей оксидом железа.
+                                p Особенности планеты — наличие слабой отмосферы, состоящей в основном из улекислого газа, времена года, пылевые бури, сильная эррозия почв.
+                        div.accomodation_info.sec
+                            div.title.h3
+                                h3.title_h3 Где это? Как туда доехать?
+                            div.accomodation_text
+                                p Расстояние до Марса — почти 56 миллионов километров. Чтобы преодалеть такое расстояние, нужно лететь на межпланетоном корабле 7-8 месяцев.
+
+            div.accomodation_decor.decor
+                div.decor_earth
+                div.decor_planet
+                div.decor_shattle
+
+        section.idea
+            div.container
+                div.title.h2
+                    h2.title_h2 От идеи до реализации
+                div.idea_content
+                    div.idea_left
+                        h3.idea_subtitle Илон Маск. Гений или безумец?
+                        div.idea_text
+                            p Канадско-американский инженер, предприниматель, изобретатель и инвестор; миллиардер. Основатель компаний SpaceX и X.com, позже переименованной в PayPal. Планирует потратить большую часть накоплений на реализацию своей мечты, а также мечты многих тысяч романтиков, писателей, учёных: создать внеземную цивилизацию.
+                        blockquote.idea_blockquote.blockquote Мы должны сделать эту мечту реальностью за наше время жизни. Любой человек, который пожелает отправиться на Марс, должен иметь такую возможность
+                        div.idea_text
+                            p — заявил Маск на Международной астронавтической конференции в Гвадалахаре (Мексика). Он обосновал необходимость своего проекта вопросом выживания человечества, которое для своего сохранения должно стать «космическим видом».
+                        div.idea_text
+                            p Илон поставил перед собой цель: скоратить стоимость вывода кораблей в космос в 10 раз, что станет первым шагом для человечества в освоении Марса.
+                    div.idea_right
+                        div.idea_photo
+                            img(src="img/main_photo.png")
+
+        section.price
+            div.container
+                div.price_content
+                    div.price_img
+                        img(src="img/rocket.png")
+                    div.price_info
+                        span.price_title Стоимость перелёта
+                        p.price_description Высадка двоих астронавтов на Луну обошлась США в 20 млрд. долларов. Маск стремится сократить эту цифру в 20 000 раз, что составит 500 000 долларов на человека.
+                        div.price_promotion
+                            span.price_num $500 k
+                            span.price_goal и ты на Марсе!
+                            button(type="button").price_button Я готов лететь
+
+    section.journal
+        div.container
+            span.journal_title Подводные камни в масштабах космоса
+            div.journal_video
+                div.video_block
+            div.journal_tabs
+                div.journal_left
+                    ul.tabs
+                        li.tabs_title.active
+                            span.tabs_text Жить или выживать?
+                            span.tabs_icon
+                        li.tabs_title
+                            span.tabs_text Готовы ли технологии?
+                            span.tabs_icon
+                        li.tabs_title
+                            span.tabs_text Путешествие на грани фантастики
+                            span.tabs_icon
+                        li.tabs_title
+                            span.tabs_text Жизнь на Марсе
+                            span.tabs_icon
+                div.journal_right
+                    div.tabs_content
+                        span.journal_subtitle Жить или выживать?
+                        div.journal_content
+                            p Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?
+                            p Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.
+                            p На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.
+
+    section.conditions
+        div.container
+            span.conditions_title Организация жизни в колонии
+            div.conditions_tabs
+                div.conditions_left
+                    div.conditions_line
+                    ul.tabs
+                        li.tabs_title.accomodation.active
+                            span.tabs_icon
+                            div.tabs_wrapper
+                                span.tabs_text Проживание
+                        li.tabs_title.security
+                            span.tabs_icon
+                            div.tabs_wrapper
+                                span.tabs_text Безопасность
+                        li.tabs_title.science
+                            span.tabs_icon
+                            div.tabs_wrapper
+                                span.tabs_text Научная работа
+                        li.tabs_title.fun
+                            span.tabs_icon
+                            div.tabs_wrapper
+                                span.tabs_text Развлечения
+                        li.tabs_title.garden
+                            span.tabs_icon
+                            div.tabs_wrapper
+                                span.tabs_text Садоводство
+
+                div.conditions_right
+                    div.condition_img
+                        img(src="img/condition_img.jpg")
+                    div.condition_subtitle
+                        span Проживание
+                    div.condetion_text
+                        p В основе жилых помещений лежат надувные компоненты — спальня, рабочая зона, гостиная, парник для выращивания зелени — 50 м2 на человека. Благодаря этим компонентам, колонисты смогут принять душ, приготовить свежую пищу, носить обычную одежду. Весь комплекс соединен сетью ходов.
+                    button(type="button").condition_btn Подробнее
+
+
+
+
+
+
+
+
+
+
+
+
+

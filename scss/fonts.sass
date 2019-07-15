@@ -1,0 +1,22 @@
+@mixin font($ff, $ff_url_ttf, $ff_url_eot, $ff_url_woff, $ff_weight)
+  font-family: $ff
+  src: $ff_url_ttf format('truetype')
+  src: $ff_url_eot format('eot')
+  src: $ff_url_woff format('woff')
+  font-weight: $ff_weight
+
+@font-face
+  @include font('ProximaNova', url('../fonts/ProximaNova-Thin.ttf'), url('../fonts/ProximaNova-Thin.eot?'), url('../fonts/ProximaNova-Thin.woff'), 200)
+
+@font-face
+  @include font('ProximaNova', url('../fonts/ProximaNova-Light.ttf'), url('../fonts/ProximaNova-Light.eot?'), url('../fonts/ProximaNova-Light.woff'), 300)
+
+@font-face
+  @include font('ProximaNova', url('../fonts/ProximaNova-Regular.ttf'), url('../fonts/ProximaNova-Regular.eot?'), url('../fonts/ProximaNova-Regular.woff'), 400)
+
+@font-face
+  @include font('ProximaNova', url('../fonts/ProximaNova-Bold.ttf'), url('../fonts/ProximaNova-Bold.eot?'), url('../fonts/ProximaNova-Bold.woff'), 500)
+
+@font-face
+  @include font('ProximaNova', url('../fonts/ProximaNova-Black.ttf'), url('../fonts/ProximaNova-Black.eot?'), url('../fonts/ProximaNova-Black.woff'), 600)
+
